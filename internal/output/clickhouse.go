@@ -213,7 +213,7 @@ func (chConfig clickhouseConfig) clickhouseOutputWorker(ctx context.Context) err
 				err := batch.Append(
 					data.Timestamp,
 					time.Now(),
-					util.GeneralFlags.ServerName,
+					data.Identity, // util.GeneralFlags.ServerName,
 					data.IPVersion,
 					data.SrcIP.To16(),
 					data.DstIP.To16(),
