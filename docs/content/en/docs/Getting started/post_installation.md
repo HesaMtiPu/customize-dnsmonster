@@ -25,7 +25,7 @@ After=network-online.target
 Type=simple
 Restart=always
 RestartSec=3
-ExecStart=/sbin/dnsmonster --config /etc/dnsmonster.ini
+ExecStart=/sbin/dnsmonster --config /etc/dnsmonster/dnsmonster.ini
 
 [Install]
 WantedBy=multi-user.target
