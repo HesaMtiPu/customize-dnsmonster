@@ -674,7 +674,7 @@ The default retention policy for the ClickHouse tables is set to 30 days. You ca
 
 NOTE: to change a TTL at any point in time, you need to directly connect to the Clickhouse server using a `clickhouse` client and run the following SQL statement (this example changes it from 30 to 90 days):
 ```sql
-ALTER TABLE DNS_LOG MODIFY TTL DnsDate + INTERVAL 90 DAY;`
+ALTER TABLE DNS_LOG MODIFY TTL DnsDate + INTERVAL 90 DAY;
 ```
 
 NOTE: The above command only changes TTL for the raw DNS log data, which is the majority of your capacity consumption. To make sure that you adjust the TTL for every single aggregation table, you can run the following:
